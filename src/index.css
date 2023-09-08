@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+    color: rgb(0, 140, 255);
+}
+.link{
+    background-color: red;
+}
+.backgroundLoading{
+    position: absolute;
+    background-color: rgba(17, 17, 17, 0.468);
+    width: 100%;
+    height: 97%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.loader{
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border-bottom: 5px solid blue;
+    border-top: 5px solid blue;
+    border-left:5px solid blue;
+    border-right: 5px solid transparent;
+    border-radius: 50%;
+    animation-name: loader;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transition: all;
+}
+@keyframes loader {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.switch{
+    @apply w-12 bg-green-500 rounded-xl flex py-[2px] px-[2px] items-center transition-all 
+}
+.circle{
+    @apply bg-white w-5 h-5 text-transparent rounded-full translate-x-5 transition-all
+}
+.switchOff{
+    @apply w-12 bg-slate-900 rounded-xl flex py-[2px] px-[2px] items-center transition-all
+}
+.circleOff{
+    @apply bg-white w-5 h-5 text-transparent rounded-full transition-all
+}
+
+
+
+
+
+
+
+
+
+
