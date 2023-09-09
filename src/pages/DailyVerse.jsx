@@ -39,10 +39,12 @@ function DailyVerse() {
       randomVerseList.length===0?<p className="font-semibold px-2 ">No Data</p>:
       randomVerseList.map(function(verses){
       return <>
-        {loading?<Loading/>:<div className="bg-slate-400 border-2 mx-1 rounded-md my-4 border-slate-900 py-3 px-3 font-semibold">
+        {loading?<Loading/>:
+        <div className="bg-slate-300 border-2 sm:py-6 sm:px-4 sm:mx-5 md:mx-10  flex flex-col md:w-[60%] sm:w-[80%] mx-1 rounded-md my-4 border-slate-900 py-3 px-3 font-semibold">
           <p className="text-center font-bold">{verses.book_name} {verses.chapter}:{verses.verse}</p>
           <p>{verses.text}</p>
-        </div>}
+        </div>
+        }
       </>
     })}
     <br/>
